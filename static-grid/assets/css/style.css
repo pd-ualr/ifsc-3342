@@ -1,0 +1,63 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  /*Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/ */
+  /* Start of "Micro clearfix" */
+  
+  .cf {
+    zoom: 1;
+  }
+  .cf:before,
+  .cf:after {
+    content: "";
+    display: table;
+  }
+  .cf:after {
+    clear: both;
+  }
+  
+  /* End of "Micro clearfix" */
+
+  main{
+    width:1000px;
+    margin: 20px auto;
+    border: 1px solid #000;
+    background-image:url("../img/grid\ 8.jpg");
+  }
+
+header.primary, footer.primary{
+  width:956px;
+  margin:20px;
+  background-color:rgba(3, 33, 69, 0.4);
+  float:left;
+  padding:20px;
+}
+/* width is 102 because it has to accomodate the 102px colums and 20px gutter*/
+/* static needs float:left to make it work */
+
+#blog{
+  width:712px;
+  background-color:rgba(3, 33, 69, 0.4);
+  float:left;
+  margin-left:20px;
+  padding:20px;
+}
+/* 712px is calculated by adding 102 column with 20px, multiplying that by 6 columns and subtracting 20*/
+
+aside{
+  width:224px;
+  float:left;
+  background-color:rgba(3, 33, 69, 0.4);
+  margin-left:20px;
+  padding:20px;
+}
+/* 224px is calculated by adding 102 column with 20px, multiplying that by 2 columns*/
+
+/*having a consistent margin/gutter makes life easier */

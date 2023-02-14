@@ -1,0 +1,69 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  /*Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/ */
+  /* Start of "Micro clearfix" */
+  
+  .cf {
+    zoom: 1;
+  }
+  .cf:before,
+  .cf:after {
+    content: "";
+    display: table;
+  }
+  .cf:after {
+    clear: both;
+  }
+  
+  /* End of "Micro clearfix" */
+
+  /*this assignment builds off of statid grid exercise, look at that assignment for more information */
+  main{
+    width:90vw;
+    margin: 20px auto;
+    border: 1px solid #000;
+  }
+
+header.primary, footer.primary{
+  /*956 px is my original width*/
+  /*1000/956=95.60%*/
+  width:95.60%;
+  /*padding is 20px*/
+  /*20/1000*/
+  margin:2%;
+  background-color:rgba(3, 33, 69, 0.4);
+  float:left;
+  /* padding is divided by the header */
+  /* 20/956 = 2.09%*/
+  padding:2.09%;
+}
+
+
+#blog{
+  /*width=712*/
+  /*712/1000=0.712*/
+  width:71.20%;
+  background-color:rgba(3, 33, 69, 0.4);
+  float:left;
+  margin-left:2%;
+  padding:2%;
+}
+
+
+aside{
+  /*width=224*/
+  /*224/1000*/
+  width:22.4%;
+  float:left;
+  background-color:rgba(3, 33, 69, 0.4);
+  margin-left:2%;
+  padding:2%;
+}

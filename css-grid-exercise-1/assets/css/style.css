@@ -1,0 +1,65 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Start of "Micro clearfix" */
+
+.cf {
+  zoom: 1;
+}
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+/* End of "Micro clearfix" */
+/* this assignment builds off of responsive grid and static grid, go look at those for more reference */
+main{
+margin:2vh auto;
+border:1px solid #000;
+width:80vw;
+gap:20px;
+padding:0 20px;
+/* adding vw instead of pixel allows it to be fluid */
+display: grid;
+grid-template-columns: repeat(8,1fr);
+}  
+
+header.primary, footer.primary{
+background-color:rgba(3, 33, 69, 0.4);
+grid-column: 1 / span 8;
+padding:20px;
+}
+
+#content{
+padding:0;
+display:grid;
+grid-column: 1 / span 8;
+grid-template-columns: repeat(8,1fr);
+grid-template-columns: subgrid;
+/* subgrid is a feature only firefox supports but i wish its everywhere */
+grid-gap:20px;
+}
+
+#blog{
+background-color:rgba(3, 33, 69, 0.4);
+grid-column: 1 / span 5;
+padding: 20px;
+}
+
+aside{
+background-color:rgba(3, 33, 69, 0.4);
+grid-column: 6 / 9;
+padding:20px;
+}

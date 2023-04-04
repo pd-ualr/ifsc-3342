@@ -1,0 +1,29 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #0B2447;
+}
+
+section {
+  max-width: 50vw;
+  display: flex;
+  margin: 20px auto;
+  background: #19376D;
+  border-radius: 20px;
+}
+section article {
+  margin: 20px;
+  border-radius: 20px;
+  padding: 1em;
+  background: #576CBC;
+  color: #A5D7E8;
+}/*# sourceMappingURL=style.css.map */

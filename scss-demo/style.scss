@@ -1,0 +1,37 @@
+$typeface:'Open Sans', sans-serif;
+$body-color: #0B2447;
+$background-color: #19376D;
+$border-color: #576CBC;
+$text-color: #A5D7E8;
+$radius:20px;
+$margin:20px;
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+  font-family:$typeface;
+  background: $body-color;
+}
+
+section {
+  max-width:50vw;
+  display: flex;
+  margin: $margin auto;
+  background: $background-color;
+  border-radius:$radius;
+
+  article {
+    margin: $margin;
+    border-radius:$radius;
+    padding: 1em;
+    background: $border-color;
+    color: $text-color;
+  }
+}

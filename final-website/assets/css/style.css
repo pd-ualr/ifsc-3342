@@ -1,491 +1,173 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-   html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-  }
-
-  /* Remove text-shadow in selection highlight, Customize the background color to match your design. */
-  ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-  }
-  ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-  }
-
-  /* A better looking default horizontal rule*/
-  hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-  }
-
-  /* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers: */
-  audio, canvas, iframe, img, svg, video {
-    vertical-align: middle;
-  }
-  
-  /* Remove default fieldset styles. */
-  fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Allow only vertical resizing of textareas. */
-  textarea {
-    resize: vertical;
-  }
-  
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-   * {
-    box-sizing: border-box;
-  }
-
-   body {
-    background: #fff8f0 !important;
-    padding: 0rem 2rem;
-   }
-
-   .wrapper {
-    max-width: 80vw;
-    margin: auto;
-  }
-
-  header {
-    margin-top: 1em;
-    border-bottom: 2px solid #2f2f2f;
-    border-top: 2px solid #2f2f2f;
-    
-  }
-
-   /* Large Logo */
-    .logo h1{
-    font-family: 'Old Standard TT', serif;
-    font-weight: 800;
-    font-size: 40px;
-    text-transform: uppercase;
-    line-height: 72px;
-    margin-top: 25px;
-    margin-bottom: 0px;
-    }
-
-    .logo{
-
-    text-align: center;
-    }
-
-    .logo a {
-    color: #2e1d14;
-    text-decoration: none;
-    padding: 0px;
-    margin: 0px;
-    }
-
-    .logo p {
-    font-style: italic;
-    }
-    /* Nav bar */
-    nav{
-        text-transform: uppercase;
-        padding: 12px 0 15px 0;
-        text-align: center;
-        }
-
-    ul{
-    display:inline;
-    justify-content: center;
-    align-items: center;
-    list-style:none;
-    margin: 0;
-    padding: 0;
-    }
-      
-    ul a{
-    font-family: 'Old Standard TT', serif;
-    font-weight: 800;
-    padding:10px;
-    text-decoration: none;
-    color: #000;
-    }
-
-    footer {
-      border-top: 2px solid #000;
-        font-weight: 800;
-        font-family: 'Old Standard TT', serif;
-        text-align:center;
-        padding:10px;
-    }
-    
-    footer a{
-    font-weight: 400;
-    color: #2e1d14;
-    text-decoration: none;
-    }
-    
-    nav {
-      display: inline;
-      list-style-type: none;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    
-    nav li {
-      display: inline-block;
-      font-size: 20px;
-      padding: 20px;
-    }
-
-  #main h1{
-    font-family: 'Old Standard TT', serif;
-    font-weight: 800;
-    font-size: 25px;
-  }
-
-  aside h2{
-    font-family: 'Old Standard TT', serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-
-  img{
-    width: 100%;}
-  
-  article {
-    padding-bottom:2em;
-  }
-
-
-  @media screen and (max-width:799px){
-    article:not(.last2) {
-      border-bottom: 2px solid #000;
-      }
-  }
-  
-/* Tablet View */
-
-@media screen and (min-width:800px){
-
-  main.container {
-    max-width:100%;
-    grid-template-columns: minmax(0, 1fr) 300px;
-    grid-template-rows: 1fr 3fr;
-    grid-gap:2em;
-    min-width: 0;
-    display:grid;
-    grid-template-areas:
-      "main"
-      "side"
-      "minis";
-    grid-template-areas:
-      "main side"
-      "main side"
-      "minis side";  }
-   
-
-   #main{
-    grid-area:main;
-  }
-  
-  aside{
-    grid-area:side;
-  }
-
-  #minis{
-    grid-area:minis
-  }
-
-   .logo h1{
-    font-size: 60px;
-}
-#main h1 {
-  font-size: 30px;
-  margin: 0.5em 0 0 0;
+body {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0rem 2rem;
+  background-color: #fff8f0;
 }
 
-article:not(.last2) {
-  border-bottom: 2px solid #000;
-  }
-
-  #main p{
-    font-size: 18px;
-  }
+h1, h2, h3,
+h4, h5, h6 {
+  color: #3b3833;
+  font-family: "Old Standard TT", serif;
 }
 
-@media screen and (min-width:1270px){
-
-  main.container {
-    max-width:100%;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap:2em;
-  }
-  #main{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 20px;
-  }
-#img1{
-  width: 300px; 
+p {
+  color: #3b3833;
 }
 
-  .titlemain{
-    grid-column: 1 / 3;
-		grid-row: 1;
-  }
-  .logo h1{
-    font-size: 80px;
-}
-#main h1 {
-  font-size: 45px;
-}
-#main p{
-  font-size: 20px;
-}
-
-img{
+img {
   width: 100%;
-  height: 188px;
-  object-fit: cover;}
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-#img1{
-  width: 100%;
+header {
+  border-bottom: 2px solid #3b3833;
+  text-align: center;
+  grid-area: header;
+}
+header a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #3b3833;
+  font-size: 50px;
+}
+header a:hover {
+  padding: 5px;
+  background-color: #3b3833;
+  color: #fff8f0;
+  transition: background-color 0.5s ease;
 }
 
-#my-video-1 {
-  /* override other styles to make responsive */
-  width: 100%;
-  height: 600px;
+nav {
+  text-transform: uppercase;
+  padding: 0;
+  text-align: center;
 }
 
-#my-video {
-  width: 100%;
-  height: 188px;
+ul {
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul a {
+  font-size: 25px;
+  font-weight: 800;
+  padding: 10px;
+  text-decoration: none;
+  color: #3b3833;
+  font-family: "Old Standard TT", serif;
+}
+ul li {
+  display: inline;
+}
+
+#contacts {
+  text-align: center;
+}
+#contacts h1 {
+  font-size: 50px;
 }
 
 #wufoo-q1jz2il30snx6dc {
-  display:block;
-  margin:auto;
+  border-bottom: 2px solid #3b3833;
+  padding-bottom: 20px;
 }
 
-.format h1{
-  font-family: 'Old Standard TT', serif;
-  font-weight: 800;
-  font-size: 40px;
+main, aside, .minis, .minis2 {
+  border-bottom: 2px solid #3b3833;
+  padding-bottom: 20px;
 }
 
-.format p{
-  font-size: 20px;
+footer {
+  text-align: center;
+}
+footer a {
+  color: #3b3833;
+  text-decoration: none;
 }
 
-.format {
-  text-align:center;
-  padding-bottom:25px;
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "header" "article" "aside" "minis" "minis2" "footer";
+}
+.grid > * {
+  color: #ffffff;
+  font-size: 18px;
+  font-family: roboto;
 }
 
-#footer {
-  display:none;
+main {
+  grid-area: article;
 }
 
-.timeline {
-  margin: 4em auto;
-  position: relative;
-  max-width: 46em;
+aside {
+  grid-area: aside;
 }
 
-.timeline:before {
-  background-color: black;
-  content: '';
-  margin-left: -1px;
-  position: absolute;
-  top: 0;
-  left: 2em;
-  width: 2px;
-  height: 99%;
+.minis {
+  grid-area: minis;
 }
 
-.timeline-event {
-  position: relative;
+.minis2 {
+  grid-area: minis2;
 }
 
-.timeline-information {
-  position: relative;
-  top: 0em;
-  left: 5em;
-  width: 80%;
-}
-.timeline-information h3 {
-  font-size: 1.75em;
-}
-.timeline-information h4 {
-  font-size: 1.2em;
-  margin-bottom: 1.2em;
-}
-.timeline-information strong {
-  font-weight: 700;
-}
-.timeline-information p:not(.timeline-event-thumbnail) {
-  padding-bottom: 1.2em;
+footer {
+  grid-area: footer;
 }
 
-.timeline-icon {
-  -moz-transition: -moz-transform 0.2s ease-in;
-  -o-transition: -o-transform 0.2s ease-in;
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: #e05d4f;
-  outline: 10px solid #3b3833;
-  display: block;
-  margin: 0.5em 0.5em 0.5em -0.5em;
-  position: absolute;
-  top: 0;
-  left: 2em;
-  width: 1em;
-  height: 1em;
-}
-
-/* ==========================================================================
-   Helper/Utility classes
-   ========================================================================== */
-  
-  /* Hide visually and from screen readers */
-  .hidden,
-  [hidden] {
-    display: none !important;
+@media (min-width: 679px) {
+  main img {
+    width: 100%;
+    height: 300px;
   }
-
-  /* Hide only visually, but have it available for screen readers: */
-  .visually-hidden {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    white-space: nowrap;
-    width: 1px;
-    /* 1 */
+  aside img {
+    width: 100%;
+    height: 300px;
   }
-  
-  /* Extends the .visually-hidden class to allow the element to be focusable when navigated to via the keyboard: */
-  .visually-hidden.focusable:active,
-  .visually-hidden.focusable:focus {
-    clip: auto;
+  .minis img {
+    width: 100%;
     height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    white-space: inherit;
-    width: auto;
   }
-  
-  /* Hide visually and from screen readers, but maintain layout */
-  .invisible {
-    visibility: hidden;
+  .div1 {
+    grid-area: 1/1/2/3;
   }
-  
-  /* Clearfix: contain floats */
-  .clearfix::before,
-  .clearfix::after {
-    content: "";
-    display: table;
+  .div2 {
+    grid-area: 2/1/3/2;
   }
-  .clearfix::after {
-    clear: both;
+  .div3 {
+    grid-area: 2/2/3/3;
   }
-  
-  /* ==========================================================================
-     EXAMPLE Media Queries for Responsive Design.
-     These examples override the primary ('mobile first') styles.
-     Modify as content requires.
-     ========================================================================== */
-  @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+  .minis {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
   }
-  @media print,
-    (-webkit-min-device-pixel-ratio: 1.25),
-    (min-resolution: 1.25dppx),
-    (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+  .grid {
+    grid-template-columns: 4fr 2fr;
+    grid-template-areas: "header header" "article aside" "article aside" "minis minis2" "footer footer";
   }
-  
-  /* ==========================================================================
-     Print styles.
-     Inlined to avoid the additional HTTP request:
-     https://www.phpied.com/delay-loading-your-print-css/
-     ========================================================================== */
-  @media print {
-    *,
-    *::before,
-    *::after {
-      background: #fff !important;
-      color: #000 !important;
-      /* Black prints faster */
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
-    a,
-    a:visited {
-      text-decoration: underline;
-    }
-  
-    a[href]::after {
-      content: " (" attr(href) ")";
-    }
-  
-    abbr[title]::after {
-      content: " (" attr(title) ")";
-    }
-  
-    /* Don't show links that are fragment identifiers, or use the `javascript:` pseudo protocol */
-    a[href^="#"]::after,
-    a[href^="javascript:"]::after {
-      content: "";
-    }
-    pre {
-      white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
-    }
-    tr,
-    img {
-      page-break-inside: avoid;
-    }
-    p,
-    h2,
-    h3 {
-      orphans: 3;
-      widows: 3;
-    }
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
+}
+@media (min-width: 954px) {
+  header h1 a {
+    font-size: 78px;
   }
+  main {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 50px 1fr;
+    grid-gap: 20px;
+  }
+  main img {
+    width: 100%;
+    height: auto;
+  }
+  aside img {
+    width: 100%;
+    height: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

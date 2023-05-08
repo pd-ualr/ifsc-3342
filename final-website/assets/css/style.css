@@ -177,15 +177,16 @@
     padding-bottom:2em;
   }
 
-  article:not(.last) {
-  border-bottom: 2px solid #000;
-  }
-  
 
+  @media screen and (max-width:876px){
+    article:not(#last2) {
+      border-bottom: 2px solid #000;
+      }
+  }
   
 /* Tablet View */
 
-@media screen and (min-width:801px){
+@media screen and (min-width:877px){
 
   main.container {
     max-width:100%;
@@ -226,6 +227,10 @@
 #main h1 {
   font-size: 30px;
 }
+
+article:not(.last) {
+  border-bottom: 2px solid #000;
+  }
 }
 
 @media screen and (min-width:1281px){
@@ -241,7 +246,7 @@
       "minis side";
   }
   .logo h1{
-    font-size: 80px;
+    font-size: 90px;
 }
 #main h1 {
   font-size: 40px;

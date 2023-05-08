@@ -78,17 +78,16 @@
     .logo h1{
     font-family: 'Old Standard TT', serif;
     font-weight: 800;
-    font-size: 80px;
+    font-size: 60px;
     text-transform: uppercase;
-    display: inline-block;
+    display: inline;
     line-height: 72px;
-    margin-top: 25px;
     margin-bottom:0px;
     }
 
     .logo{
+    margin-top: 20px;
     text-align: center;
-    position: relative;
     }
 
     .logo a {

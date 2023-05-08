@@ -71,6 +71,9 @@ footer a {
   padding: 20px;
   border-radius: 5px;
 }
+.col h1 {
+  color: #F1B24A;
+}
 .col:hover {
   background-color: #0D2C27;
   color: #164A41;

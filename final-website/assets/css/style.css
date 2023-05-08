@@ -181,6 +181,7 @@
   
   main.container{
     min-width: 0;
+    display:grid;
     grid-template-areas:
       "main"
       "side"

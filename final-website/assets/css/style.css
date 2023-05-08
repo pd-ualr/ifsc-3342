@@ -135,7 +135,6 @@
     }
 
     footer {
-        border-top: 2px solid #2f2f2f;
         font-weight: 800;
         font-family: 'Old Standard TT', serif;
         text-align:center;
@@ -161,6 +160,77 @@
       font-size: 20px;
       padding: 20px;
     }
+
+  #main h1{
+    font-family: 'Old Standard TT', serif;
+    font-weight: 800;
+    font-size: 40px;
+  }
+
+  #main p{
+    font-size: 19px;
+  }
+
+  aside h2{
+    font-family: 'Old Standard TT', serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  img{width: 100%;}
+  
+  article {
+    padding-bottom:2em;
+    border-bottom: 2px solid #000;
+  }
+
+  main.container{
+    display: grid;
+    grid-template-areas:
+      "main"
+      "side"
+      "minis";
+  }
+
+  #main{
+    grid-area:main;
+  }
+  
+  aside{
+    grid-area:side;
+  }
+
+  #minis{
+    grid-area:minis
+  }
+
+/* Tablet View */
+
+@media screen and (min-width:801px){
+
+  main.container {
+    max-width:100%;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    grid-gap:2em;
+    grid-template-areas:
+      "main side"
+      "main side"
+      "minis side"
+      "minis side";
+  }
+
+}
+
+#my-video-1 {
+  /* override other styles to make responsive */
+  width: 100%;
+  height: 600px;
+}
+
+#my-video {
+  width: 100%;
+  height: 188px;
+}
 /* ==========================================================================
    Helper/Utility classes
    ========================================================================== */

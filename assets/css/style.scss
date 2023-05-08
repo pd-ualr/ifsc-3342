@@ -9,11 +9,17 @@ $main: #4D774E;
 $radius:20px;
 $margin:20px;
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	font-family: $typeface;
     background-color: $dark;
+    overflow-wrap: break-word;
+    height: 100vh;
 }
 
 footer {
@@ -30,15 +36,14 @@ footer {
 
 .container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 20px;
 	grid-row-gap: 20px;
-	padding: 20px;
+    padding:20px;
     a {
         color: $grabber;
         text-decoration: none;
     }
 }
+
 .nav {
 	display: flex;
 	justify-content: space-between;
@@ -93,14 +98,17 @@ footer {
     }
 }
 
-@media (max-width: 1281px) {
+@media screen and (min-width: 801px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
     }
 }
 
-@media (max-width: 801px) {
+@media screen and (min-width: 1281px) {
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
     }
 }
+

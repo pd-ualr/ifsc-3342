@@ -80,13 +80,13 @@
     font-weight: 800;
     font-size: 60px;
     text-transform: uppercase;
-    display: inline;
     line-height: 72px;
-    margin-bottom:0px;
+    margin-top: 25px;
+    margin-bottom: 0px;
     }
 
     .logo{
-    margin-top: 20px;
+
     text-align: center;
     }
 
@@ -98,7 +98,6 @@
     }
 
     .logo p {
-
     font-style: italic;
     }
     /* Nav bar */
@@ -130,10 +129,11 @@
     }
 
     .logo h1 a:hover:before {
-      content: "INSINCERE MEDIA";
+      content: "FAKE MEDIA";
     }
 
     footer {
+      border-top: 2px solid #000;
         font-weight: 800;
         font-family: 'Old Standard TT', serif;
         text-align:center;
@@ -180,9 +180,12 @@
   
   article {
     padding-bottom:2em;
-    border-bottom: 2px solid #000;
   }
 
+  article:not(.last) {
+  border-bottom: 2px solid #000;
+  }
+  
   main.container{
     display: grid;
     grid-template-areas:
@@ -210,6 +213,24 @@
   main.container {
     max-width:100%;
     grid-template-columns: minmax(0, 1fr) 300px;
+    grid-template-rows: 1fr 3fr;
+    grid-gap:2em;
+    grid-template-areas:
+      "main side"
+      "main side"
+      "minis side";  }
+   
+    #main .img {
+      display: block;
+      width: 100%;
+   }
+}
+
+@media screen and (min-width:1281px){
+
+  main.container {
+    max-width:100%;
+    grid-template-columns: auto 300px;
     grid-gap:2em;
     grid-template-areas:
       "main side"
@@ -230,6 +251,92 @@
   width: 100%;
   height: 188px;
 }
+
+#wufoo-q1jz2il30snx6dc {
+  display:block;
+  margin:auto;
+}
+
+.format h1{
+  font-family: 'Old Standard TT', serif;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.format p{
+  font-size: 20px;
+}
+
+.format {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+#footer {
+  display:none;
+}
+
+.timeline {
+  margin: 4em auto;
+  position: relative;
+  max-width: 46em;
+}
+
+.timeline:before {
+  background-color: black;
+  content: '';
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 2px;
+  height: 99%;
+}
+
+.timeline-event {
+  position: relative;
+}
+
+.timeline-information {
+  position: relative;
+  top: 0em;
+  left: 5em;
+  width: 80%;
+}
+.timeline-information h3 {
+  font-size: 1.75em;
+}
+.timeline-information h4 {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+.timeline-information strong {
+  font-weight: 700;
+}
+.timeline-information p:not(.timeline-event-thumbnail) {
+  padding-bottom: 1.2em;
+}
+
+.timeline-icon {
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #e05d4f;
+  outline: 10px solid #3b3833;
+  display: block;
+  margin: 0.5em 0.5em 0.5em -0.5em;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 1em;
+  height: 1em;
+}
+
 /* ==========================================================================
    Helper/Utility classes
    ========================================================================== */

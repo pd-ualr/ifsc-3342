@@ -24,7 +24,7 @@ p {
   color: $ink;
 }
 
-img {
+img, video {
   width: 100%;
   object-fit: cover;
       /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
@@ -35,11 +35,6 @@ img {
         filter: none;
           -webkit-filter: grayscale(0);
         }
-}
-
-video {
-  width: 100%;
-  object-fit: cover;
 }
 
 header {

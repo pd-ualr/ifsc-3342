@@ -15,7 +15,7 @@ p {
   color: #3b3833;
 }
 
-img {
+img, video {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -24,15 +24,9 @@ img {
   -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
   -webkit-transition: all 0.5s ease-in-out;
 }
-img:hover {
+img:hover, video:hover {
   filter: none;
   -webkit-filter: grayscale(0);
-}
-
-video {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 header {

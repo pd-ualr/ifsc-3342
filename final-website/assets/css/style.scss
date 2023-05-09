@@ -27,6 +27,14 @@ p {
 img {
   width: 100%;
   object-fit: cover;
+      /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+      filter: gray; /* IE5+ */
+      -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+      -webkit-transition: all .5s ease-in-out;  
+      &:hover {
+        filter: none;
+          -webkit-filter: grayscale(0);
+        }
 }
 
 video {

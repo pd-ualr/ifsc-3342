@@ -79,11 +79,6 @@ aside {
         font-style: italic;
     }
 }
-
-.minis2 h1 {
-    font-style: italic;
-    font-size: 23px;;
-  }
 .headtitle {
     text-align: center;
     h1{
@@ -114,11 +109,15 @@ footer {
   display: grid;
   grid-gap: 20px;
   grid-template-areas:"article" "aside" "minis" "minis2";
-    >* {
     color: $color_2;
     font-size: 18px;
     font-family: $font-family_1;
   }
+
+.grid {
+    a {
+        color:$ink;
+    }
 }
 main {
   grid-area: article;
@@ -221,17 +220,52 @@ footer {
     }
  }
  
-@media (max-width: 767px) {
+@media (max-width: 762px) {
     .space3 {
         padding-top: 20px;
     }
+    img {
+        width: 100%;
+        height: 300px;
+      }
+      .lining{
+        border-bottom:$line;
+        padding-bottom:$pad;
+      }
+      .lining2{
+        border-top:$line;
+        padding-top:$pad;
+      }
+      article h1{
+        margin:0 0 15px 0 ;
+      }
+      .minis2 {
+        h1 {
+            font-style: italic;
+            margin:0;
+            font-size: 25px;
+        }
+    }
+    .div1 h1{
+        font-size: 30px;
+    }
 }
-@media (min-width: 768px) {
+
+@media (min-width: 763px) {
   main {
     img {
       width: 100%;
       height: 300px;
     }
+  }
+  .div1 h1{
+    margin-top:0;
+    font-size: 25px;
+    margin-bottom:15px;
+  }
+  aside h1{
+    margin-top:0px;
+    margin-bottom:0px;
   }
   aside {
     img {
@@ -241,16 +275,24 @@ footer {
   }
   aside {
     h1{
-        margin-bottom:1.1em;
+        margin-bottom:0.9em;
     }
 }
+.minis2 h1 {
+    font-size: 28px;
+  }
+
   .minis {
     img{
       width: 100%;
       height: auto;
     }
   }
-
+  .minis2 {
+    h1 {
+        margin-top:0px;
+         }
+        }
   .div1 {
     grid-area: 1 / 1 / 2 / 3;
   }
@@ -271,29 +313,51 @@ footer {
   }
 }
 
-@media (min-width: 954px) {
+@media (min-width: 1099px) {
     header h1 a{
         font-size: 78px;
       }
   main {
     display: grid;
     grid-template-columns: 4fr 2fr;
-    grid-template-rows: 70px 1fr;
+    grid-template-rows: 75px 1fr;
     grid-gap: 20px;
     img {
       width: 100%;
-      height: auto;
+      height: 400px;
     }
+  }
+  .div1 h1{
+    margin-top:0;
+    font-size: 35px;;
+  }
+  aside h1{
+    margin-top:0px;
+    margin-bottom:33px;
+    font-size: 25px;
   }
   aside {
     img {
       width: 100%;
-      height: auto;
+      height: 283px;
     }
   }
   minis img {
     width: 400px;
     height: 400px;
   }
+.minis2 {
+h1 {
+    font-size: 35px;
+    margin-top:0px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}
+.div3 p{
+    margin-top:0;
+    
+}
 }
 
